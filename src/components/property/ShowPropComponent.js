@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-const MyComponent = ({ name, email, favorite }) => (
+const ShowPropComponent = ({ name, email, favorite }) => (
   <div>
     <p>my name is {name}</p>
     <p>and email is {email}</p>
@@ -9,16 +9,16 @@ const MyComponent = ({ name, email, favorite }) => (
   </div>
 );
 
-MyComponent.defaultProps = {
+ShowPropComponent.defaultProps = {
   name: 'DEFAULT_NAME',
   email: 'DEFAULT_EMAIL',
   favorite: 'FRUIT',
 };
 
-MyComponent.propTypes = {
+ShowPropComponent.propTypes = {
   name: PropTypes.string,
   email: PropTypes.string,
   favorite: PropTypes.string,
 };
 
-export default MyComponent;
+export default ShowPropComponent;
