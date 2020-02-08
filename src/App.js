@@ -1,26 +1,22 @@
+/* eslint-disable react/jsx-filename-extension */
 import React from 'react';
-import logo from './logo.svg';
+// import logo from './logo.svg';
 import './App.css';
+import MyComponent from './components/MyComponent';
+import StatePropsTestComponent from './components/StatePropsTestComponent';
+import EventPracticeComponent from './components/EventPracticeComponent';
+import BetterEventPracticeComponent from './components/BetterEventPracticeComponent';
+import CounterFunctional from './components/CounterFunctional';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
-}
+
+const App = () => (
+  <div className="App">
+    <MyComponent name="SAM" email="sam@mail.com" />
+    <StatePropsTestComponent value={10} />
+    <EventPracticeComponent />
+    <BetterEventPracticeComponent />
+    <CounterFunctional />
+  </div>
+);
 
 export default App;
