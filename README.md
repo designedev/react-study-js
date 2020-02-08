@@ -1,5 +1,20 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# REACT STUDY USING JS
+REACT 요소를 적용해 보는 스터디용 프로젝트.<br/>
+[Create React App](https://github.com/facebook/create-react-app) 으로 생성, eslint([airbnb rule](https://github.com/airbnb/javascript/tree/master/packages/eslint-config-airbnb)) 적용
 
+현재 공부한 부분들
+- JSX 개념 및 렌더링
+- props
+- state
+- 함수형 컴포넌트와 클래스형 컴포넌트
+- Hooks(useState)
+
+
+<br/>
+<br/>
+<br/>
+
+### 아래는 기본 생성된 README.md 의 내용.
 ## Available Scripts
 
 In the project directory, you can run:
