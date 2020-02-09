@@ -9,6 +9,8 @@ import BetterEventPracticeComponent from './components/event/BetterEventPractice
 import CounterFunctional from './components/state/CounterFunctional';
 import ValidationSample from './components/ref/ValidationSample';
 import ScrollBox from './components/ref/ScrollBox';
+import IterationSample from './components/iteration/IterationSample';
+import IterationManipulate from './components/iteration/IterationManipulate';
 
 class App extends Component {
   render() {
@@ -22,6 +24,8 @@ class App extends Component {
         <ValidationSample />
         <ScrollBox ref={(ref) => { this.scrollBox = ref; }} />
         <button type="button" onClick={() => this.scrollBox.scrollToBottom()}>Scroll!</button>
+        <IterationSample />
+        <IterationManipulate />
       </div>
     );
   }
