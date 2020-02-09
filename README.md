@@ -8,6 +8,8 @@ REACT 요소를 적용해 보는 스터디용 프로젝트.<br/>
 - state
 - 함수형 컴포넌트와 클래스형 컴포넌트
 - Hooks(useState)
+- 이벤트 핸들링
+- Ref(DOM ref, Component ref. class component only)
 
 
 <br/>
