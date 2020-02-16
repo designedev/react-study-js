@@ -14,10 +14,12 @@ const IterationManipulate = () => {
   const [name, setName] = useState('');
 
   const addNames = () => {
-    console.log(`ADD => name : ${name}, id : ${nextId}`);
-    setNames(names.concat({ id: nextId, name }));
-    setNextId(nextId + 1);
-    setName('');
+    if (name !== '') {
+      console.log(`ADD => name : ${name}, id : ${nextId}`);
+      setNames(names.concat({ id: nextId, name }));
+      setNextId(nextId + 1);
+      setName('');
+    }
   };
 
   const removeName = (e) => {
