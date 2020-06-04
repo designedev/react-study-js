@@ -7,7 +7,7 @@ class ValidationSample extends Component {
     classname: '',
   };
 
-  passwordRef = React.createRef();
+  // passwordRef = React.createRef();
 
   render() {
     const {
@@ -25,7 +25,7 @@ class ValidationSample extends Component {
       this.setState({
         classname: password === '0000' ? 'success' : 'failure',
       }, () => {
-        this.passwordRef.current.focus();
+        this.passwordRef.focus();
       });
     };
 
@@ -33,8 +33,7 @@ class ValidationSample extends Component {
       <div>
         <input
           type="text"
-          // ref={(ref) => { this.password = ref; }} - can be used for old version.
-          ref={this.passwordRef}
+          ref={(ref) => { this.passwordRef = ref; }}
           value={password}
           onChange={handleChange}
           className={classname}

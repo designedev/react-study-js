@@ -3,9 +3,12 @@ import React, { useState } from 'react';
 const EventPracticeComponent = () => {
   const [val, setVal] = useState('');
   const onChangeHandler = (e) => {
+    console.log(e.target.value);
+    console.log(e.target);
     setVal(e.target.value);
   };
   const resetValHandler = () => {
+    alert(val);
     setVal('');
   };
 

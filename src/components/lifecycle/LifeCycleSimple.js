@@ -1,9 +1,7 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
-import ShowPropComponent from '../property/ShowPropComponent';
 
 class LifeCycleSimple extends Component {
-
   state = {
     number: 0,
     color: null,
@@ -14,15 +12,13 @@ class LifeCycleSimple extends Component {
   constructor(props) {
     super(props);
     console.log('constructor');
-    this.setState({color: this.props.color});
   }
 
   // props 데이터를 state 에 동기화시킬때 사용.
   static getDerivedStateFromProps(nextProps, prevState) {
     console.log('getDerivedStateFromProps');
     if (nextProps.color !== prevState.color) {
-      // return { color: nextProps.color };
-      return null;
+      return { color: nextProps.color };
     }
     return null;
   }
@@ -68,8 +64,9 @@ class LifeCycleSimple extends Component {
 
   handleClick = () => {
     console.log('handle click');
+    const { number } = this.state;
     this.setState({
-      number: this.state.number + 1,
+      number: number + 1,
     });
   }
 
@@ -83,18 +80,19 @@ class LifeCycleSimple extends Component {
   }
 
   render() {
+    const { color, number } = this.state;
     console.log('render');
 
-    let style = {
-      color : this.state.color
+    const style = {
+      color,
     };
 
     return (
       <div>
-        <h1 style={style} ref={(ref) => this.myRef = ref}>
-          {this.state.number}
+        <h1 style={style} ref={(ref) => { this.myRef = ref; }}>
+          {number}
         </h1>
-        <p>color : {this.state.color}</p>
+        <p>color : {color}</p>
         <button type="button" onClick={this.handleClick}>PLUS</button>
         <button type="button" onClick={this.handleRandomColorClick}>SHUFFLE COLOR</button>
       </div>
@@ -102,8 +100,11 @@ class LifeCycleSimple extends Component {
   }
 }
 
-ShowPropComponent.propTypes = {
-  number: PropTypes.number,
+LifeCycleSimple.defaultProps = {
+  color: 'red',
+};
+
+LifeCycleSimple.propTypes = {
   color: PropTypes.string,
 };
 
