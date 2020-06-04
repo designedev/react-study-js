@@ -15,10 +15,12 @@ class LifeCycleSimple extends Component {
   }
 
   // props 데이터를 state 에 동기화시킬때 사용.
-  static getDerivedStateFromProps(nextProps, prevState) {
-    console.log('getDerivedStateFromProps');
-    if (nextProps.color !== prevState.color) {
-      return { color: nextProps.color };
+  static getDerivedStateFromProps(props, state) {
+    console.log(props.color);
+    console.log(state.color);
+    if (props.color !== state.color) {
+      console.log('color different');
+      return { color: state.color };
     }
     return null;
   }

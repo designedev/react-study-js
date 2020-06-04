@@ -5,6 +5,8 @@ import './App.css';
 import ScrollBox from './components/ref/ScrollBox';
 import IterationSample from './components/iteration/IterationSample';
 import IterationManipulate from './components/iteration/IterationManipulate';
+import LifeCycleSimple from './components/lifecycle/LifeCycleSimple';
+import ErrorBoundary from './components/errorCatch/ErrorBoundary';
 
 class App extends Component {
   render() {
@@ -33,6 +35,9 @@ class App extends Component {
         <button type="button" onClick={() => this.scrollBox.scrollToBottom()}>Scroll!</button>
         <IterationSample />
         <IterationManipulate />
+        <ErrorBoundary>
+          <LifeCycleSimple />
+        </ErrorBoundary>
         <div style={footerStyle} />
       </div>
     );
